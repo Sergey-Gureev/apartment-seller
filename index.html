@@ -37,6 +37,32 @@
 
     <!-- Your Code Here -->
     <!-- You should start doing handlebar stuff here -->
+    <script id="apt-template" type="text/x-handlebars-template">
+        <div class="result">
+
+            {{#if address}}
+            <img src="{{ img }}">
+            <span class="label l-addr ">address: </span><span class="address">{{ address }}</span>
+            <span class="label l-price ">price: </span><span class="price">{{ price }} Shekels</span>
+            <span class="label l-rooms ">rooms: </span><span class="rooms">{{ rooms }}</span>
+                {{#if parking}}
+                <span class="label l-park">parking: </span><span class="park"><svg xmlns="http://www.w3.org/2000/svg" height="3em" viewBox="0 0 448 512">
+                    <path d="M64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zM192 256h48c17.7 0 32-14.3 32-32s-14.3-32-32-32H192v64zm48 64H192v32c0 17.7-14.3 32-32 32s-32-14.3-32-32V288 168c0-22.1 17.9-40 40-40h72c53 0 96 43 96 96s-43 96-96 96z"/>
+                </svg></span>
+                
+                {{/if}}
+                {{#if immediate}}
+                    {{#with contactDetails}}
+                        <div class="label">name: {{ name }}</div>
+                        <div class="label">email: {{ email }}</div>
+                    {{/with}}
+
+                {{/if}}
+                <button>buy</button>
+            {{/if}}
+            
+        </div>
+    </script>
     <!-- Your Code Here -->
 
     <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
@@ -46,4 +72,4 @@
     <script src="main.js"></script>
 </body>
 
-</html>
+</hdiv
